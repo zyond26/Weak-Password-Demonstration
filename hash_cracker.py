@@ -78,17 +78,22 @@ def brute_force_attack_verbose(target_hash, max_length=4, algo="md5"):
 # demo main
 if __name__ == "__main__":
     password = input("Nhập mật khẩu gốc để demo: ").strip()
-    algo = "md5"
+
+    print("\nChọn thuật toán hash:")
+    print("1. MD5")
+    print("2. SHA1")
+    print("3. SHA256")
+
+    choice = input("Lựa chọn (1/2/3): ").strip()
+    algo_map = {"1": "md5", "2": "sha1", "3": "sha256"}
+    algo = algo_map.get(choice, "md5")
+
+    # target_hash = hash_password(password, algo)
+    # algo = "md5"
     hashed = hash_password(password, algo)
 
     print(f"\n[+] Mật khẩu gốc: {password}")
     print(f"[+] Hash ({algo.upper()}): {hashed}")
-
-    # ============= Dictionary attack (dùng wordlist trong code)
-    print("\n[Dictionary Attack - wordlist có sẵn]")
-    wordlist = ["123456", "password", "qwerty", "abc123", "111111", "letmein", "Hello", "admin"]
-    result = dictionary_attack_verbose(hashed, wordlist, algo)
-    print("Kết quả:", result if result else "Không tìm thấy")
 
     # ============= Dictionary attack (dùng wordlist từ file)
     print("\n[Dictionary Attack - từ file password.txt]")
@@ -101,3 +106,4 @@ if __name__ == "__main__":
     print("\n[Brute Force Attack]")
     result = brute_force_attack_verbose(hashed, max_length=6, algo=algo)
     print("Kết quả:", result if result else "Không crack được")
+

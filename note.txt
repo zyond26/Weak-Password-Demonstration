@@ -10,7 +10,7 @@
 
 
 ** logic hoạt động của code 
-1. Nhập dữ liệu : hash cần crack , loại thuật toán (MD5/SHA1/SHA256), wordlist
+1. Nhập dữ liệu : hash cần crack , loại thuật toán (MD5/SHA1/SHA256)
 2. Đọc wordlist : lặp qua từng dòng
 3. Hash từng mật khẩu bằng thuật toán tương ứng
 4. So sánh : nếu hash tính ra == hash cần crack -> tìmm được mật khẩu
