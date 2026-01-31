@@ -26,14 +26,10 @@ Dự án này là một **demo học tập** nhằm minh họa:
 
 ### Cách chạy
 ```bash
-git clone https://github.com/zyond26/Password-Hash-Cracker-Dictionary-Attack-.git
-cd Password-Hash-Cracker-Dictionary-Attack-
+git clone https://github.com/zyond26/Weak-Password-Demonstration.git
+cd Weak-Password-Demonstration
 
 +) Run in terminal :
 
 python hash_cracker.py
 
-+) Run in web  
-
-- Cài đặt flask = lệnh pip install flask
--Cài xong tthì chạy : python app.py 
